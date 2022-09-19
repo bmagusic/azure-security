@@ -1,0 +1,1 @@
+az role definition list --name "Virtual Machine Contributor"

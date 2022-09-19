@@ -1,0 +1,1 @@
+az ad user create --display-name “Alice Miller” --password dQ76bmz7rMVs9gSP --user-principal-name alice@contoso.com --force-change-password-next-sign-in true

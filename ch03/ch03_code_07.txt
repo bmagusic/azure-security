@@ -1,0 +1,10 @@
+az network firewall application-rule create \
+   --collection-name App-Coll01  \
+   --firewall-name Contoso-FW01  \
+   --name Allow-Google  \
+   --protocols Http=80 Https=443  \
+   --resource-group myResourceGroup  \
+   --target-fqdns www.google.com  \
+   --source-addresses 10.0.2.0/24  \
+   --priority 200  \
+   --action Allow    

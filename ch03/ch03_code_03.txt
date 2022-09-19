@@ -1,0 +1,7 @@
+az network route-table route create \
+  --resource-group myResourceGroup  \
+  --name DG-Route  \
+  --route-table-name Firewall-rt-table  \
+  --address-prefix 0.0.0.0/0  \
+  --next-hop-type VirtualAppliance  \
+  --next-hop-ip-address $fwprivaddr    

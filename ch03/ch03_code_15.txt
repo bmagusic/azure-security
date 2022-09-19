@@ -1,0 +1,5 @@
+az afd security-policy create \
+    --resource-group myResourceGroup \
+    --profile-name myWAFAzD \
+    --security-policy-name contososecurity \
+    --domains /subscriptions/...

@@ -1,0 +1,4 @@
+az network ddos-protection update  \
+    --resource-group MyResourceGroup \
+    --name MyDdosProtectionPlan \
+    --vnets MyVnet    

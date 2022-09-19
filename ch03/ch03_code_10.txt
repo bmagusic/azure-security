@@ -1,0 +1,15 @@
+az network application-gateway create \
+  --name myAppGateway \
+  --location northeurope \    
+  --resource-group bomagusi-rg3 \
+  --vnet-name myVNet \
+  --subnet mySubnet \
+  --capacity 2 \
+  --sku WAF_v2 \
+  --http-settings-cookie-based-affinity Disabled \
+  --frontend-port 80 \
+  --http-settings-port 80 \
+  --http-settings-protocol Http \
+  --public-ip-address myPublicIPAddress \
+  --waf-policy my-waf-policy \
+  --priority 1

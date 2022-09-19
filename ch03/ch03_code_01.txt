@@ -1,0 +1,23 @@
+az network firewall create \
+    --name Contoso-FW1 \
+    --resource-group myResourceGroup \
+    --location eastus    
+az network public-ip create \
+    --name fw-pip \
+    --resource-group myResourceGroup \
+    --location eastus \
+    --allocation-method static \ 
+    --sku standard    
+az network firewall ip-config create \
+    --firewall-name Contoso-FW01 \
+    --name FW-config \
+    --public-ip-address fw-pip \
+    --resource-group myResourceGroup \
+    --vnet-name myVNet 
+az network firewall update \
+    --name Contoso-FW01 \
+    --resource-group myResourceGroup 
+az network public-ip show \
+    --name fw-pip \
+    --resource-group myResourceGroup \
+fwprivaddr="$(az network firewall ip-config list -g myResourceGroup -f Contoso-FW1 --query "[?name=='FW-config'].privateIpAddress" --output tsv)"

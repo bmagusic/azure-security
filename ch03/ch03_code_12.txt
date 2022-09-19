@@ -1,0 +1,6 @@
+az network front-door waf-policy create \
+  --name AzFrontDoorWafPolicy \
+  --resource-group myResourceGroup \
+  --sku Premium_AzureFrontDoor \
+  --disabled true \
+  --mode Detection    

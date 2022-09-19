@@ -1,0 +1,1 @@
+az identity create --name MyManagedIdentity --resource-group MyResourceGroup 

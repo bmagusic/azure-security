@@ -1,0 +1,11 @@
+az network firewall network-rule create \
+   --collection-name Net-Coll01  \
+   --destination-addresses 209.244.0.3 209.244.0.4  \
+   --destination-ports 53  \
+   --firewall-name Contoso-FW01  \
+   --name Allow-DNS  \
+   --protocols UDP  \
+   --resource-group myResourceGroup  \
+   --priority 200  \
+   --source-addresses 10.0.2.0/24  \
+   --action Allow  

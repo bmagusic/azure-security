@@ -1,0 +1,5 @@
+az network application-gateway waf-policy create \
+  --name my-waf-policy  \
+  --resource-group myResourceGroup  \
+  --type OWASP  \
+  --version 3.2    

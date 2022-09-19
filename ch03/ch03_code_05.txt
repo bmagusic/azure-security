@@ -1,0 +1,13 @@
+az network firewall nat-rule create \
+   --collection-name Nat-Coll01  \
+   --dest-addr 209.244.0.3  \
+   --destination-ports 53  \
+   --firewall-name Contoso-FW01  \
+   --name DNAT-MgmtAccess  \
+   --protocols TCP UDP  \
+   --resource-group myResourceGroup  \
+   --source-addresses 10.0.0.1  \
+   --translated-address 128.1.1.1  \
+   --translated-port 126  \
+   --priority 201  \
+   --action Dnat   

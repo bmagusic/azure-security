@@ -1,0 +1,5 @@
+az network front-door waf-policy managed-rules add \
+    --policy-name AzFrontDoorWafPolicy \
+    --resource-group myResourceGroup \
+    --type Microsoft_BotManagerRuleSet \
+    --version 1.0     

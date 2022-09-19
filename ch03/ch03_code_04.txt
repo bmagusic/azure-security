@@ -1,0 +1,6 @@
+az network vnet subnet update \
+    -n Workload-SN  \
+    -g myResourceGroup  \
+    --vnet-name myVNet  \
+    --address-prefixes 10.0.2.0/24 \
+    --route-table Firewall-rt-table 

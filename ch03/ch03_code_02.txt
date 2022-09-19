@@ -1,0 +1,5 @@
+az network route-table create \
+    --name Firewall-rt-table  \
+    --resource-group myResourceGroup  \
+    --location eastus  \  
+    --disable-bgp-route-propagation true  
