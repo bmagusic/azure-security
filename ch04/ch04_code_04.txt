@@ -1,0 +1,4 @@
+az network bastion update     \
+    --name contosoVMBastion     \
+    --resource-group myResourceGroup     \
+    --enable-tunneling    

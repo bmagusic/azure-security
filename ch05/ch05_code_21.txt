@@ -1,0 +1,4 @@
+az keyvault network-rule add \
+    --resource-group myResourceGroup \
+    --name azureSecKV01 \
+    --subnet /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VNET1/subnets/VMSubnet   

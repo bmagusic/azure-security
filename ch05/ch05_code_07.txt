@@ -1,0 +1,4 @@
+az storage container create \
+    --account-name storage012 \
+    --name mycontainer \
+    --sas-token 2015-02-21&st=2015-07...     

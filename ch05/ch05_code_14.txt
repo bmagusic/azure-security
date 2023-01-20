@@ -1,0 +1,4 @@
+az role assignment create \
+    --assignee-object-id b1c0fcde-adee-45f8-ad61-46dd299bb887 \
+    --role "Key Vault Crypto Service Encryption User" \
+    --scope "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/chapter5/providers/Microsoft.KeyVault/vaults/azureSecKV01" 

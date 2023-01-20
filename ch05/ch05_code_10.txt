@@ -1,0 +1,6 @@
+az keyvault create \
+    --name azureSecKV01 \
+    --resource-group myResourceGroup \
+    --location centralus \
+    --enable-purge-protection \
+    --enable-rbac-authorization    

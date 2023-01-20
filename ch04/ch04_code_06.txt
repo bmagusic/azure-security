@@ -1,0 +1,7 @@
+az network bastion ssh     \
+    --name contosoBastion     \
+    --resource-group myResourceGroup     \
+    --target-resource-id /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/chapter4/providers/Microsoft.Compute/virtualMachines/ContosoVM001     \
+    --auth-type ssh-key     \
+    --username bob@contoos.com     \
+    --ssh-key C:/filepath/sshkey.pem     

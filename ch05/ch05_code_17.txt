@@ -1,0 +1,6 @@
+az storage account encryption-scope create \
+    --resource-group chapter5 \
+    --account-name storage012 \
+    --name ContosoScope \
+    --key-source Microsoft.Keyvault \
+    --key-uri “https://azureseckv01.vault.azure.net/keys/ExampleKey/8c3ec318a0f6481c9cd380794f8a8431”    

@@ -1,0 +1,6 @@
+az storage account create     \
+    --name storage012     \
+    --resource-group myResourceGroup     \
+    --location centralus     \
+    --sku Standard_RAGRS     \
+    --kind StorageV2    

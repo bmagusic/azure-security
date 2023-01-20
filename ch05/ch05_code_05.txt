@@ -1,0 +1,4 @@
+az storage account network-rule add     \
+    --resource-group myResourceGroup     \
+    --account-name storage012     \
+    --ip-address 13.14.15.0/24    

@@ -1,0 +1,7 @@
+az storage account create \
+    --name storage012 \
+    --resource-group chapter5 \
+    --location centralus \
+    --sku Standard_RAGRS \
+    --kind StorageV2 \
+    --require-infrastructure-encryption true    

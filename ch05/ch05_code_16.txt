@@ -1,0 +1,5 @@
+az storage account encryption-scope create \
+    --resource-group chapter5 \
+    --account-name storage012 \
+    --name ContosoScope \
+    --key-source Microsoft.Storage    

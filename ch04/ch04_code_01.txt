@@ -1,0 +1,7 @@
+az network vnet create     \
+    --name Contoso-VNET1     \
+    --resource-group myResourceGroup    \
+    --address-prefix 10.0.0.0/16     \
+    --subnet-name AzureBastionSubnet     \
+    --subnet-prefix 10.0.0.0/24    \
+    --location eastus     

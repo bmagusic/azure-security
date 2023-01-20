@@ -1,0 +1,9 @@
+az webapp config access-restriction add     \
+    --resource-group myResourceGroup     \
+    --name ContosoWebApp001     \
+    --rule-name ‘Allow Subnet Traffic’     \
+    --action Allow     \
+    --priority 200     \
+    --vnet-name Contoso-VNET1     \
+    --subnet VMSubnet     \
+    --vnet-resource-group myResourceGroup   

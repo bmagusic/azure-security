@@ -1,0 +1,5 @@
+az security contact create \
+    --name ‘default1’  \ 
+    --email ‘bob@contoso.com’  \ 
+    --alert-notifications ‘on’  \
+    --alerts-admins ‘on’   

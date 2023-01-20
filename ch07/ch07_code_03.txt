@@ -1,0 +1,1 @@
+az security pricing create -n AppServices –tier ‘standard’  

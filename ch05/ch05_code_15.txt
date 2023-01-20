@@ -1,0 +1,6 @@
+az storage account update \
+    --name storage012 \
+    --resource-group chapter5 \
+    --encryption-key-name ExampleKey \
+    --encryption-key-source Microsoft.Keyvault \
+    --encryption-key-vault "https://azureseckv01.vault.azure.net/"   

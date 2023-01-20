@@ -1,0 +1,7 @@
+az webapp config access-restriction add     \
+    --resource-group myResourceGroup     \
+    --name ContosoWebApp001     \
+    --rule-name ‘Allow IP address’     \
+    --action Allow     \
+    --ip-address 122.131.144.0/24     \
+    --priority 100     

@@ -1,0 +1,4 @@
+az role assignment create  \
+    --assignee “bob@contoso.com”  \
+    --role “Key Vault Crypto Officer”  \
+    --scope "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/chapter5/providers/Microsoft.KeyVault/vaults/azureSecKV01"    

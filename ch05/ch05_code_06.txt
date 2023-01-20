@@ -1,0 +1,4 @@
+az storage container create \
+    --account-name storage012 \
+    --name mycontainer \
+    --auth-mode login   

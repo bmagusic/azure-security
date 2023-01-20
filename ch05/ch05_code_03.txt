@@ -1,0 +1,5 @@
+az network vnet subnet update     \
+    --resource-group myResourceGroup     \
+    --vnet-name VNET     \
+    --name VMSubnet     \
+    --service-endpoints Microsoft.Storage     

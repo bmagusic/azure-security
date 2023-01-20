@@ -1,0 +1,5 @@
+az network bastion rdp     \
+    --name contosoBastion     \
+    --resource-group myResourceGroup    \
+    --target-resource-id /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/chapter4/providers/Microsoft.Compute/virtualMachines/ContosoVM001     \
+    --resource-port “3389”    

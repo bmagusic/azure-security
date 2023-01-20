@@ -1,0 +1,4 @@
+az keyvault update  \
+    --resource-group myResourceGroup  \
+    --name azureSecKV01  \
+    --default-action Deny    

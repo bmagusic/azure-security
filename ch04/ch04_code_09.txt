@@ -1,0 +1,8 @@
+az webapp config access-restriction add     \
+    --resource-group myResourceGroup     \
+    --name ContosoWebApp001     \
+    --rule-name ‘Allow Az Front Door Traffic’     \
+    --action Allow     \
+    --priority 200     \
+    --service-tag AzureFrontDoor.Backend     \
+    --http-header x-azure fdid=12345678-abcd-1234-abcd-12345678910a    

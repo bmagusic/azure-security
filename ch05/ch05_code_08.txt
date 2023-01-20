@@ -1,0 +1,5 @@
+az storage container create \
+    --account-name storage012 \
+    --name mycontainer \
+    --account-key 2015-02-21&st=2015-07... \
+    --auth-mode key    

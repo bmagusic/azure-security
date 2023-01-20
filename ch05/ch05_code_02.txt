@@ -1,0 +1,4 @@
+az storage account update     \
+    --resource-group myResourceGroup     \
+    --name storage012     \
+    --default-action Deny    

@@ -1,0 +1,7 @@
+az network bastion create     \
+    --name contosoBastion     \
+    --public-ip-address myPublicIP     \
+    --resource-group myResourceGroup     \
+    --vnet-name Contoso-VNET1     \
+    --location eastus     
+

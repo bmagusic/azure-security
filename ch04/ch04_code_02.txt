@@ -1,0 +1,5 @@
+az network public-ip create     \
+    --name myPublicIP     \
+    --resource-group myResourceGroup     \
+    --sku Standard     \
+    --location eastus     

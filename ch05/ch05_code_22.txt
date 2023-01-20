@@ -1,0 +1,4 @@
+az keyvault network-rule add \
+    --resource-group myResourceGroup \
+    --name azureSecKV01 \
+    --ip-address  13.14.15.0/24     
