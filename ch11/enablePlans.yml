@@ -24,4 +24,41 @@ jobs:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
       
       - run: |
-          az security pricing list
+          # Enables Defender CSPM plan
+          az security pricing create -n CloudPosture --tier 'Standard'
+          
+          # Enables Defender for Servers Plan 2
+          # az security pricing create -n VirtualMachines --tier 'Standard'
+          
+          # Enable Defender for Azure SQL PaaS plan
+          # az security pricing create -n SqlServers --tier 'Standard'
+
+          # Enable Defender for AppService plan
+          # az security pricing create -n AppServices --tier 'Standard'
+
+          # Enable Defender for Storage plan
+          # az security pricing create -n StorageAccounts --tier 'Standard'
+
+          # Enable Defender for SQL servers on machines plan
+          # az security pricing create -n SqlServerVirtualMachines --tier 'Standard'
+
+          # Enable Defender for Open-source relational databases plan
+          # az security pricing create -n OpenSourceRelationalDatabases --tier 'Standard'
+
+          # Enable Defender for Cosmos DB plan
+          # az security pricing create -n CosmosDbs --tier 'Standard'
+
+          # Enable Defender for Containers plan
+          # az security pricing create -n Containers --tier 'Standard'
+
+          # Enable Defender for Key Vault plan
+          # az security pricing create -n KeyVaults --tier 'Standard'
+          
+          # Enable Defender for DNS plan
+          # az security pricing create -n Dns --tier 'Standard'
+
+          # Enable Defender for Resource Manager plan
+          # az security pricing create -n Arm --tier 'Standard'
+
+
+          
