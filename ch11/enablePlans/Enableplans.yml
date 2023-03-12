@@ -1,0 +1,80 @@
+name: MDCPlan Enablment
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the master branch
+on:
+  [push, pull_request]
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+    - uses: actions/checkout@v2
+    
+    - name: Azure Login
+      uses: Azure/login@v1.4.6
+      with:
+    # Paste output of `az ad sp create-for-rbac` as value of secret variable: AZURE_CREDENTIALS
+       creds: ${{ secrets.AZURE_CREDS }}
+       enable-AzPSSession: true   
+          
+    - name: Enable Defender for Servers plan
+      uses: Azure/powershell@v1
+      with:
+      # Specify the Az PowerShell script here.
+       inlineScript: 
+        Set-AzSecurityPricing -Name "virtualmachines" -PricingTier "Standard"
+       azPSVersion: latest
+    - name: Enable Sql Servers
+      uses: Azure/powershell@v1
+      with:
+      # specification of script
+        inlineScript:
+          Set-AzSecurityPricing -Name "SqlServers" -PricingTier "Standard"
+        azPSVersion: latest
+    - name: Enable App services
+      uses: Azure/powershell@v1
+      with:
+      # specification of script
+        inlineScript:
+          Set-AzSecurityPricing -Name "AppServices" -PricingTier "Standard"
+        azPSVersion: latest   
+    - name: Enable Storage accounts
+      uses: Azure/powershell@v1
+      with:
+      # specification of script
+        inlineScript:
+          Set-AzSecurityPricing -Name "StorageAccounts" -PricingTier "Standard"
+        azPSVersion: latest  
+    - name: Enable Kubernetes Service
+      uses: Azure/powershell@v1
+      with:
+      # specification of script
+        inlineScript:
+          Set-AzSecurityPricing -Name "KubernetesService" -PricingTier "Standard"
+    - name: Enable Dns Service
+      uses: Azure/powershell@v1
+      with:
+      # specification of script
+        inlineScript:
+          Set-AzSecurityPricing -Name "Dns" -PricingTier "Standard"
+        azPSVersion: latest   
+    - name: Enable Containers Service
+      uses: Azure/powershell@v1
+      with:
+      # specification of script
+        inlineScript:
+          Set-AzSecurityPricing -Name "Containers" -PricingTier "Standard"
+        azPSVersion: latest 
+    - name: Enable KeyVaults Service
+      uses: Azure/powershell@v1
+      with:
+      # specification of script
+        inlineScript:
+          Set-AzSecurityPricing -Name "KeyVaults" -PricingTier "Standard"
+        azPSVersion: latest 
