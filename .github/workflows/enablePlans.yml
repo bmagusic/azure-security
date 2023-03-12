@@ -24,4 +24,5 @@ jobs:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
       
       - run: |
-          az security pricing list
+          # Enable Defender CSPM
+          az security pricing create -n CloudPosture --tier 'Standard'
