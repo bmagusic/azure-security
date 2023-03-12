@@ -1,0 +1,27 @@
+# This workflow enables Defender for Cloud plans
+name: enable_Defender_for_Cloud_Plans
+
+# Controls when the workflow will run
+on:
+  [push, pull_request]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+
+      - name: Azure Login
+        uses: Azure/login@v1.4.6
+        with:
+          # Paste output of `az ad sp create-for-rbac` as value of secret variable: AZURE_CREDENTIALS
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+      
+      - run: |
+          az security pricing list
