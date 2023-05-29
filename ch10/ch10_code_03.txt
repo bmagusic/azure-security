@@ -1,0 +1,15 @@
+az policy definition create --name allowedLocationsOnly --display-name 'Allowed Virtual Machine Locations Only'    --rules "{ \     
+                \"if\": \
+                {  \"not\": { \
+                    \"field\": 
+    \"Microsoft.Compute/virtualMachines/Locations[*].locationName\", \
+                     \"in\": [ \
+                        \"East US\", \
+                        \"East US 2\" \
+                        ] \
+                    } \
+                }, \
+                \"then\": { \
+                    \"effect\": \"deny\" \
+                } \
+            }" 

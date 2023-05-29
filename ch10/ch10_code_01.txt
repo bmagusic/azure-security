@@ -1,0 +1,1 @@
+az policy assignment create --name 'Allowed Virtual Machine SKUs' --display-name 'Allowed Virtual Machine SKUs' --scope '/subscriptions/00000000-0000-0000-0000-000000000000' --policy 'cccc23c7-8427-4f53-ad12-b6a63eb452b3' --params '{ "listOfAllowedSKUs": { "value": ["Standard_D2s_v3", "Standard_D4s_v3", "Standard_DS1_v2", "Standard_DS2_v2"]}}' --output jsonc 
